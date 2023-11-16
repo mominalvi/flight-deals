@@ -20,7 +20,7 @@ class NotificationManager:
                  f" from {city_info['departureCity']}-{city_info['departureIATACode']}"
                  f" to {city_info['destinationCity']}-{city_info['destinationIATACode']}"
                  f" from {city_info['departureDate']} to {city_info['arrivalDate']}",
-            from_='+19388887294',
-            to='+16475078485',
+            from_=os.getenv('FROM_NUMBER'),
+            to=os.getenv('TO_NUMBER'),
         )
         print(message.status)
